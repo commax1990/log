@@ -1,7 +1,11 @@
 python -m pip install Django        // установка Django
 django-admin startproject mysite    // создание проекта
 python manage.py runserver          // запустить сервер
+python manage.py runserver debug=true     // запустить сервер с отладкой
+
 python manage.py startapp polls     // создаём приложение
 
 python manage.py makemigrations polls
 python manage.py migrate            // создание таблиц
+
+python manage.py createsuperuser    //Создание пользователя с правами администратора

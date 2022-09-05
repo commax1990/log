@@ -1,11 +1,50 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-<h1> Hello Worlds</h1>
+<link href="{% static 'css/userlogin.css'%}" rel="stylesheet">
+<!--<link rel = "stylesheet" href = "{% static 'css/baselogin.css'%}" >-->
+<body style="background-image: url({% static 'images/login.jpg' %});
+background-size: cover;  background-attachment: fixed;
+" }
+">
+<!--<body class="top">-->
+
+<div class="container">
+    <h3>Авторизация</h3>
+
+    <form action="#" method="post">
+
+        {% csrf_token %}
+
+        <!--            {{ form.as_p }}-->
+
+
+        <!--            {{ form.non_field.errors }}-->
+
+        <div class="form-group">
+            <label for="{{ form.username.id_for_label }}">User name: </label>
+            {{ form.username }}
+            <div class="invalid-feedback">
+                {{ form.username.errors }}
+            </div>
+
+            <label for="{{ form.password.id_for_label }}">Password: </label>
+            {{ form.password }}
+            <div class="invalid-feedback">
+                {{ form.password.errors }}
+            </div>
+        </div>
+        {% comment %}
+
+        {% endcomment %}
+        <button class="btn btn-primary btn-block" type="submit">Войти</a></button>
+    </form>
+
+</div>
 
 </body>
 </html>

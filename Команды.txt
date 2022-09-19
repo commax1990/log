@@ -15,3 +15,5 @@ python -m pip install Pillow
 python manage.py runserver DJANGO_DEBUG=True     // запустить сервер с отладкой
 
 //https://django.fun/docs/django/ru/4.0/ref/models/fields/#model-field-types Типы данных моделей
+
+http://127.0.0.1:8000/api/apidashborad/?format=json  Запрос

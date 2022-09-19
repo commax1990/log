@@ -6,9 +6,12 @@ python manage.py runserver          // запустить сервер
 python manage.py startapp polls     // создаём приложение
 
 python manage.py makemigrations polls
+python manage.py makemigrations dashboard
 python manage.py migrate            // создание таблиц
 
 python manage.py createsuperuser    //Создание пользователя с правами администратора
 
 python -m pip install Pillow
 python manage.py runserver DJANGO_DEBUG=True     // запустить сервер с отладкой
+
+//https://django.fun/docs/django/ru/4.0/ref/models/fields/#model-field-types Типы данных моделей
